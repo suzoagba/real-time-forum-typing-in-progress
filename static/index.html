@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+    <title>real-time-forum</title>
+</head>
+<body>
+    <script type="module" src="/static/js/main.js"></script>
+    <nav class="navBar">
+        <a  data-page=""><h1 id="logo">real-time-forum</h1></a>
+        <div class="user" id="user"></div>
+        <ul id="navBarLinks">
+        </ul>
+    </nav>
+    <div id="content" class="container"></div>
+    <section id="onlineUsersSection">
+        <h2>Online Users</h2>
+        <ul id="onlineUsersList"></ul>
+        <h2>Offline Users</h2>
+        <ul id="offlineUsersList"></ul>
+    </section>
+    <section id="chatSection">
+        <div id="chatHeading"><span id="chatHeadFrom"></span> <span id="chatClose">X</span></div>
+        <div id="chatMessages"></div>
+        <div id="typingIndicator"></div>
+        <div id="chatInput">
+            <input type="text" id="messageInput" placeholder="Aa" maxlength="160">
+            <button id="sendButton">Send</button>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,372 @@
+:root {
+    --main-bgc: #3f393a;
+    --main-textc: white;
+    --main-linkc: green;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    width: 100%;
+    background-color: lightgray;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    position: relative;
+    top: 50px;
+    background-color: white;
+    min-height: 90vh;
+    border: 30px solid white;
+}
+.navBar {
+    z-index: 4;
+    position: fixed;
+    border-bottom: 2px solid cyan;
+    display: block;
+    width: 100%;
+    background-color: var(--main-bgc);
+    color: white;
+    text-shadow: 1px 1px 0 rgba(0,0,0,.5);
+    padding: 15px;
+    white-space: nowrap;
+}
+.navBar * {
+    display: inline;
+    margin-right: 20px;
+}
+.user {
+    padding-left: 20px;
+}
+h1 {
+    color: white;
+    margin: auto;
+    width: 80%;
+    padding-bottom: 50px;
+}
+.navbar ul li, .container ul li {
+    display: inline;
+    font-family: 'Nunito', monospace;
+    padding-right: 20px;
+}
+.listOfTags {
+    border: 2px solid lightgray;
+    border-radius: 10px;
+    margin: auto;
+    padding: 15px;
+    color: white;
+    display: flex;
+    list-style: none;
+    justify-content: center;
+}
+a, a:link, a:visited {
+    text-decoration: none;
+    color: green;
+    font-weight: bold;
+    font-size: large;
+}
+a:hover {
+    color: orange;
+    cursor: pointer;
+}
+.author {
+    font-weight: bold;
+    font-size: large;
+}
+.timePosted {
+    font-weight: lighter;
+    color: gray;
+}
+.container {
+    margin: auto;
+    width: 50vw;
+    padding: 20px;
+}
+.postPreview {
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 5px;
+}
+.postInfo {
+}
+.liking {
+    float: right;
+    background-color: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding: 3px;
+}
+.likes {
+    color: green;
+}
+.dislikes {
+    color: red;
+}
+.commentInfo {
+    border-left: 2px solid lightblue;
+    margin: auto;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: white;
+    border-radius: 10px;
+    width: 50vw;
+}
+.reply {
+    margin: auto;
+    width: 50%;
+    padding: 50px;
+}
+.createPost {
+    margin: auto;
+}
+#title {
+    width: 100%;
+    padding: 5px;
+}
+textarea {
+    width: 100%;
+    height: 100px;
+    padding: 5px;
+}
+button {
+    margin: 20px;
+}
+.register, .login {
+    margin: 15px;
+    width: 100%;
+}
+.register input, .login input {
+    width: 100%;
+    padding: 5px;
+}
+.backButton {
+    font-size: small !important;
+}
+.errorMessage {
+    color: red;
+    font-weight: bold;
+}
+#error {
+    width: 100%;
+    text-align: center;
+}
+#errorInfo {
+    margin: auto;
+}
+#errorNumber {
+    font-size: 30em;
+    margin: auto;
+}
+#errorText1 {
+    font-size: 3em;
+}
+#errorText2 {
+    font-size: 2em;
+}
+
+/* WS */
+.me {
+    color: darkgrey !important;
+}
+
+#onlineUsersSection {
+    z-index: 1;
+    top: 10vh;
+    right: 20px;
+    position: fixed;
+    width: 150px;
+    max-width: 25%;
+    height: 80vh;
+    border-left: 1px solid lightgray;
+    padding: 20px;
+    background-color: var(--main-bgc);
+    color: white;
+}
+
+#onlineUsersSection li {
+    color: green;
+}
+
+#onlineUsersSection li span {
+    color: white;
+}
+
+#onlineUsersSection #offlineUsersList li, #onlineUsersSection #offlineUsersList li span {
+    color: gray;
+}
+
+#onlineUsersSection li span:hover {
+    color: orange;
+    cursor: pointer;
+}
+
+#onlineUsersSection h2 {
+    border-bottom: 1px solid cyan;
+    text-align: center;
+}
+
+#chatSection {
+    display: none;
+    position: fixed;
+    width: 300px;
+    height: 500px;
+    border: 1px solid lightGray;
+    border-radius: 5px;
+    right: calc(25% + 50px);
+    bottom: 0;
+    padding: 10px;
+    overflow: hidden;
+    background-color: white;
+}
+
+#chatHeading {
+    position: relative;
+    top: -10px;
+    left: -10px;
+    width: calc(100% + 10px);
+    padding: 5px;
+    background-color: var(--main-bgc);
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid cyan;
+    text-shadow: 1px 1px 0 rgba(0,0,0,.5);
+}
+
+#chatMessages {
+    position: relative;
+    top: -5px;
+    width: 100%;
+    height: 420px;
+    overflow-y: auto;
+    overflow-x: clip;
+    word-break: break-all;
+}
+
+#chatMessages .messageSender {
+    color: gray;
+    font-weight: lighter;
+    padding: 10px 5px 5px 15px;
+}
+
+#chatMessages .message {
+    width: 100%;
+    line-height: 20px;
+}
+
+#chatMessages .messageMe {
+    position: relative;
+    float: right;
+    width: 90%;
+}
+
+#chatMessages .messageOther {
+    position: relative;
+    float: left;
+    width: 90%;
+}
+
+#chatMessages .messageContent {
+    padding: 5px;
+    border-radius: 10px;
+    white-space: pre-wrap;
+}
+
+#chatMessages .messageMe .messageContent {
+    background-color: dodgerblue;
+    color: white;
+}
+
+#chatMessages .messageOther .messageContent {
+    background-color: lightgray;
+}
+
+#chatMessages .messageSender::after {
+    content: "\a";
+    white-space: pre;
+}
+
+#chatInput {
+    position: fixed;
+    bottom: 10px;
+    background-color: white;
+    padding: 3px;
+}
+
+#chatInput input {
+    width: 250px;
+    background-color: lightgray;
+    border: 0;
+    border-radius: 3px;
+    padding: 3px;
+}
+
+#chatInput button {
+    background-color: var(--main-bgc);
+    border: 0;
+    color: white;
+    border-radius: 3px;
+    padding: 3px;
+    margin: 0;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+
+.dot::before {
+    content: ".";
+    margin-left: 2px;
+    animation: typing 1.5s infinite;
+}
+
+.dot1::before {
+    animation-delay: 0s;
+}
+
+.dot2::before {
+    animation-delay: 0.25s;
+}
+
+.dot3::before {
+    animation-delay: 0.5s;
+}
+
+#typingIndicator {
+    display: inline-flex; /* Adjusted to inline-flex */
+    align-items: center;
+    margin-left: 10px; /* Added margin to separate from previous content */
+}
+
+@keyframes typing {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+.unreadNotifications {
+    vertical-align: super;
+    font-weight: bold;
+    color: white !important;
+    background-color: red;
+    padding: 0 5px 0 5px;
+    border-radius: 15px;
+}
+
+#chatClose {
+    font-weight: bold;
+}
+
+#chatClose:hover {
+    color: orange;
+    cursor: pointer;
+}
+
+#chatClose:hover, #chatInput button:hover {
+    color: orange;
+}
