@@ -61,6 +61,7 @@ function ws(username) {
                     } else if (message.type === "stoppedTyping") {
                         hideTypingIndicator();
                     }
+
                 } else {
                     if (message.type === "message") { // Message from someone else than chattingWith
                         const field = document.getElementById(`${message.user}Notification`);
@@ -72,6 +73,7 @@ function ws(username) {
                             unread = (parseInt(field.innerText, 10) + 1).toString();
                         }
                         changeLastMessageTime(message.user, message.to, message.time, false, unread);
+
                     }
                 }
             } else {
